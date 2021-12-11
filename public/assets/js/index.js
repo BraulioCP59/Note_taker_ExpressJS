@@ -6,7 +6,7 @@ let noteList;
 
 console.log(window.location.pathname);
 
-if (window.location.pathname === './notes.html') {
+if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -28,7 +28,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('/api/notes', { 
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
