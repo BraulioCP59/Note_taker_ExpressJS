@@ -3,6 +3,7 @@ const path = require('path');
 const api = require('./routes/index.js');
 const notes = require('./db/db.json');
 const {writeFile} = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 
 const PORT = 3001;
@@ -47,8 +48,9 @@ app.post('/api/notes', (req, res) => {
       const newNote = {
         title, 
         text,
+        id: uuidv4(),
       };
-
+      
       //
       notes.push(newNote);
 

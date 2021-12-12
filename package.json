@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/BraulioCP59/Note_taker_ExpressJS#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
   }
 }
