@@ -74,6 +74,7 @@ const handleNoteSave = () => {
     text: noteText.value,
   };
   saveNote(newNote).then(() => {
+    console.log("Here on line 77 with : ", newNote);
     getAndRenderNotes();
     renderActiveNote();
   });
